@@ -1,4 +1,3 @@
-// src/components/Current.js
 import React, { useState, useEffect } from 'react';
 import TimezoneSelector from './TimezoneSelector';
 import WeekDay from './WeekDay';
@@ -48,15 +47,15 @@ const Current = ({ currentDate, timezone, onTimezoneChange, data, onReturnToCurr
       </div>
       <TimezoneSelector onChange={onTimezoneChange} />
       {currentPage === 'previous' && <Previous data={data.previousWeekData} />}
-      {currentPage === 'current' && <div>{/* Render current week data */}</div>}
+      {currentPage === 'current' && <div>Today's Date</div>}
       {currentPage === 'next' && <Next data={data.nextWeekData} />}
       <div className="weekdays-container">
         {data.currentWeekData.map((dayData, index) => (
           <WeekDay
             key={index}
             day={dayData.day}
-            currentDisplayDate={currentDisplayDate} // Pass current date to WeekDay component
-            actualDate={new Date(dayData.date)} // Pass the actual date for each day
+            currentDisplayDate={currentDisplayDate} 
+            actualDate={new Date(dayData.date)} 
           />
         ))}
       </div>

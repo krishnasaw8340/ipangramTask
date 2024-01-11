@@ -1,4 +1,3 @@
-// src/Schedule.js
 import React, { useState } from 'react';
 import Current from './compenent/Current';
 

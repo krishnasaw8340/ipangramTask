@@ -1,4 +1,3 @@
-// src/components/Next.js
 import React from 'react';
 
 const Next = ({ data }) => {

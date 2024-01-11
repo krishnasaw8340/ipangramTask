@@ -8,22 +8,20 @@ const WeekDay = ({ day, currentDisplayDate }) => {
   ]);
 
   const getFormattedDate = () => {
-    const today = currentDisplayDate.getDay(); // 0 is Sunday, 1 is Monday, ..., 6 is Saturday
+    const today = currentDisplayDate.getDay(); 
     const dayIndex = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'].indexOf(day);
-
-    // Calculate the offset for the respective day
     let offset = dayIndex - today;
 
     const date = new Date(currentDisplayDate);
     date.setDate(currentDisplayDate.getDate() + offset);
 
-    // Reset the time to 0 to ensure only the date is considered
+
     date.setHours(0, 0, 0, 0);
 
-    // Get the formatted date in "MM/DD" format
+
     return {
       formattedDate: `${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getDate().toString().padStart(2, '0')}`,
-      date: date, // Now 'date' is defined and can be used elsewhere in the component
+      date: date,
     };
   };
 
