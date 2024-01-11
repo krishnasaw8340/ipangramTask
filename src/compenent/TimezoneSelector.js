@@ -9,7 +9,10 @@ const TimezoneSelector = ({ onChange }) => {
 
   return (
     <div className="timezone-selector">
-      <label htmlFor="timezone">Timezone: </label>
+      <div>
+
+      <h3 classN1ame='timezone'>Timezone: </h3>
+      </div>
       <select id="timezone" onChange={handleTimezoneChange}>
         {timezones.map((timezone, index) => (
           <option key={index} value={timezone}>

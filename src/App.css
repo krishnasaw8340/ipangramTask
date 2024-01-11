@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* background-color: rgb(248, 253, 255); */
 }
 .current-container{
   padding:5px 2px 0 2px;
@@ -48,14 +49,32 @@
   justify-content: space-between;
 
 }
-.timeZone{
+.timezone-selector{
   height: auto;
   width: 100%;
-  background-color: aqua;
-  margin: 10px 0 10px 0;
+  background-color: rgb(252, 255, 255);
+  padding: 30px 0 50px 0;
+
 }
-.options{
+.label{
+  /* font-size: 25px;s */
+  padding-bottom: 5px;
+}
+#timezone{
   width: 100%;
-  height: 29px;
-  font-size: 14px;
+  height: 30px;
+  font-size: 13px;
+  border: 1px solid rgba(184, 180, 180, 0.829);
+  border-radius: 5px;
+
+}
+.weekday-container{
+  margin:20px 0 40px 10px;
+  height: auto;
+  width: 80%;
+  background-color: rgb(244, 237, 250);
+}
+.weekday{
+  color: rgb(175, 30, 30);
+  padding-bottom: 10px;
 }

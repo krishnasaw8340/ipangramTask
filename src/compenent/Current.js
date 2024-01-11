@@ -55,8 +55,8 @@ const Current = ({ currentDate, timezone, onTimezoneChange, data, onReturnToCurr
           <WeekDay
             key={index}
             day={dayData.day}
-            // timezone={timezone}
             currentDisplayDate={currentDisplayDate} // Pass current date to WeekDay component
+            actualDate={new Date(dayData.date)} // Pass the actual date for each day
           />
         ))}
       </div>
